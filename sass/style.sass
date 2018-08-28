@@ -1,0 +1,274 @@
+//顏色定義
+$color_blue: #282f44
+$color_brown: #e6af2e
+$color_yellow: #f5d061
+$color_white: #ececec 
+
+@mixin ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+  
+*
+  font-family: 'Oswald','微軟正黑體'
+
+
+// *
+//   border: solid 1px black !important
+// nav
+//   display: none
+// header
+//   display: none
+// section
+//   display: none
+// footer
+//   display: none
+// section#section_contact
+//   display: block
+
+
+html,body
+  overflow-x: hidden
+  font-size: 16px
+
+nav.navbar.navbar-default.navbar-fixed-top
+  background-color: transparent
+  transition: 0.5s
+  a
+    color: $color_white
+    transition: 0.5s
+  &.at_top
+    background-color: $color_white
+    a
+      color: $color_blue
+#header
+  background-color: $color_blue
+  text-align: center
+  position: relative
+  .brand
+    width: 80%
+    max-width: 250px
+    padding: 250px 0
+  .margin_bottom
+    position: absolute
+    bottom: 0
+    right: -50px
+    width: 80%
+    animation: up 1s both
+    
+    @keyframes up
+      0%
+        bottom: -100px
+      100%
+        bottom: 0
+      
+  .explore
+    color: $color_yellow
+    position: absolute
+    left: 50%
+    bottom: 15%
+    transform: translateX(-50%)
+    transition: 0.5s
+    &:after
+      // +ab_center
+      content: 'v'
+      display: block
+      margin: 0 auto
+      transform: scale(1.2,0.5)
+      transition: 0.5s
+    &.at_top
+      opacity: 0
+
+
+section
+  padding: 60px 0px
+  position: relative
+    
+#section_about
+  background-color: $color_brown
+  position: relative
+  .container
+    transform: rotate(15deg) scale(0.8)
+  .row
+    color: black
+    height: 150px
+  .tri
+    transform: rotate(-15deg)
+  .tri1
+    transition: 0.1s
+    width: 350px
+  .tri2
+    transition: 0.2s
+    width: 20px
+    margin-left: 5%
+  .tri3
+    transition: 0.3s
+    width: 150px
+    margin-left: 70%
+  .tri4
+    transition: 0.4s
+    width: 70px
+    margin-left: -10%
+  .tri5
+    transition: 0.5s
+    width: 80px
+    margin-left: 50%
+  .r1text
+    font-size: 80px
+    transition: 0.1s
+  .r2text
+    font-size: 35px
+    transition: 0.2s
+  .r3text
+    font-size: 50px
+    text-align: right
+    transition: 0.3s
+  .col-sm-4
+    height: 100%
+    a.btn.btn-lg.btn-default
+      +ab_center
+      transform: translate(-50%,-50%) rotate(15deg)
+  .margin_about
+    position: absolute
+    left: 0
+    width: 70%
+    top: calc(100% - 2px)
+    z-index: 5
+  #cat
+    position: absolute
+    width: 200px
+    bottom: -2px
+    right: 100px
+  #cross
+    position: absolute
+    color: $color_white
+    font-size: 50px
+    font-weight: bold
+      
+#section_Service
+  background-color: $color_white
+  .container
+    text-align: center
+    h1
+      text-align: left
+    h3 
+      color: $color_brown
+    img
+      width: 50%
+      
+#section_works
+  background-color: $color_white
+  position: relative
+  .cover
+      background-color: rgba(black,.500)
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: 5
+      top: 0
+      opacity: 0
+      transition: 0.5s
+      p
+        width: 50%
+        +ab_center
+        color: white
+        
+      
+  .big
+    height: 360px
+    padding: 0
+    overflow: hidden
+    cursor: pointer
+    border: 3px solid $color_blue
+    img
+      height: 100%
+      z-index: 4
+    &:hover
+      .cover
+        opacity: 1
+  .little
+    padding: 0 30px
+    .small 
+      padding: 0
+      height: 180px
+      overflow: hidden
+      cursor: pointer
+      border: 2px solid $color_blue
+      img
+        height: 100%
+        // width: 100%
+      &:hover
+        .cover
+          opacity: 1
+        
+    
+  .marginbottom
+    position: absolute
+    top: calc(100% - 5px)
+    right: -50px
+    width: 80%
+    z-index: 5
+    
+#section_contact
+  background-color: $color_blue
+  color: $color_white
+  overflow: hidden
+  .mail_body
+    background-color: $color_white
+    color: black
+    padding: 5px 30px
+    position: relative
+    margin-right: 30px
+    label,input
+      display: block
+      margin-bottom: 10px
+    label,h5
+      width: 100px
+    textarea
+      width: 90%
+      height: 150px
+    input,textarea
+      border: none
+      border: 3px solid $color_blue
+  .mail_cover
+    position: absolute
+    left: 50%
+    top: 70%
+    transform: rotate(5deg) scale(2.1) translate(-50%,-50%)
+    img
+      width: 120%
+  .cat
+    position: absolute
+    width: 150px
+    bottom: -50px
+    
+  #cat_blue
+    right: 170px
+    z-index: 5
+    transition: 0.5s
+  #cat_grey
+    right: 50px
+    z-index: 3
+    transition: 0.5s
+  #cat_yellow
+    right: 120px
+    z-index: 4
+    transition: 0.5s
+
+#footer
+  background-color: $color_brown
+  text-align: center
+  position: relative
+  .brand
+    width: 80%
+    max-width: 250px
+    padding: 80px 0
+  
+  
+    
+      

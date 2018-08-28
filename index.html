@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Yellow Studio 設計工作室網頁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:300,400,700'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#header">Yellow Studio</a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#section_about">About</a></li>
+        <li><a href="#section_works">Works</a></li>
+        <li><a href="#section_contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header id="header">
+  <div class="container"><img class="brand" src="https://awiclass.monoame.com/img/webpic/w_icon.svg" alt=""/><img class="margin_bottom mountain" src="https://awiclass.monoame.com/img/margin/m_index.svg" alt=""/></div>
+  <div class="explore">EXPLORE</div>
+</header>
+<section id="section_about"><img class="margin_about" src="https://awiclass.monoame.com/img/margin/m_about.svg" alt=""/><img id="cat" src="https://awiclass.monoame.com/catpic/cat_lefttop.png"/>
+  <div id="cross">X</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-4"><img class="tri tri1" src="https://awiclass.monoame.com/img/webpic/w_tri1.svg" alt=""/>
+        <h2 class="r1text">WORKS IN YELLOW</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"><img class="tri tri2" src="https://awiclass.monoame.com/img/webpic/w_tri2.svg" alt=""/></div>
+      <div class="col-sm-8"><img class="tri tri3" src="https://awiclass.monoame.com/img/webpic/w_tri3.svg" alt=""/>
+        <h3 class="r2text">YELLOW STUDIO-Website Design / Development</h3>
+        <h3 class="r2text">Interactive Art Design</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class="r3text">430 MORE SUCCESS CASES</h2>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-sm-4"><a class="btn btn-lg btn-default" href="#section_works">MORE STORY</a></div>
+      <div class="col-sm-8"><img class="tri tri4" src="https://awiclass.monoame.com/img/webpic/w_tri4.svg" alt=""/><img class="tri tri5" src="https://awiclass.monoame.com/img/webpic/w_tri5.svg" alt=""/></div>
+    </div>
+  </div>
+</section>
+<section id="section_Service">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Service</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"><img src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg" alt=""/>
+        <h3>CI/VI Design</h3>
+      </div>
+      <div class="col-sm-4"><img src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg" alt=""/>
+        <h3>MotionGraphic</h3>
+      </div>
+      <div class="col-sm-4"><img src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg" alt=""/>
+        <h3>Web Development</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_works"><img class="marginbottom mountain" src="https://awiclass.monoame.com/img/margin/m_works.svg"/>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12"> 
+        <h2>Works</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 big"><img :src="workdata[1].img" alt=""/>
+        <div class="cover" v-html="workdata[1].content.substr(0,40)"></div>
+      </div>
+      <div class="col-sm-6 little">
+        <div class="row">
+          <div class="col-sm-6 small" v-for="data in workdata.slice(2,6)"><img :src="data.img" alt=""/>
+            <div class="cover"> 
+              <p>{{data.name}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_contact"><img class="cat" id="cat_blue" src="https://awiclass.monoame.com/catpic/cat_blue_cat.png" alt=""/><img class="cat" id="cat_yellow" src="https://awiclass.monoame.com/catpic/cat_yellow_cat.png" alt=""/><img class="cat" id="cat_grey" src="https://awiclass.monoame.com/catpic/cat_grey_cat.png" alt=""/>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="mails">
+          <div class="mail_cover"><img src="https://awiclass.monoame.com/img/webpic/w_mail_cover.svg" alt=""/></div>
+          <div class="mail_body">
+            <h5>Dear Yellow Studio</h5>
+            <label>Name</label>
+            <input type="text"/>
+            <label>Email</label>
+            <input type="text"/>
+            <label>Content</label>
+            <textarea></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h3>CONTACT</h3><br/>
+        <p>If you have any question about us,</p>
+        <p>Don`t hestitate to contact us !</p><br/><br/>
+        <p>YELLOWSTUDIO@gmail.com</p>
+        <p>ADDRESS: TAIWAN, TAIPEI , XORO Road</p>
+        <p>Phone: 02-12345678</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container"><img class="brand" src="https://awiclass.monoame.com/img/webpic/w_icon_black.svg" alt=""/></div>
+</footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

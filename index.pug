@@ -1,0 +1,118 @@
+nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#header') Yellow Studio
+    #navbar.navbar-collapse.collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#section_about') About
+        li
+          a(href='#section_works')
+            | Works
+        li
+          a(href='#section_contact') Contact
+header#header
+  .container
+   img.brand(src="https://awiclass.monoame.com/img/webpic/w_icon.svg", alt="")
+   img.margin_bottom.mountain(src="https://awiclass.monoame.com/img/margin/m_index.svg", alt="")
+   
+  .explore EXPLORE
+section#section_about
+  img.margin_about(src="https://awiclass.monoame.com/img/margin/m_about.svg", alt="")
+  img#cat(src="https://awiclass.monoame.com/catpic/cat_lefttop.png")
+  #cross X
+  .container
+    .row
+      .col-sm-8.col-sm-offset-4
+        img.tri.tri1(src="https://awiclass.monoame.com/img/webpic/w_tri1.svg", alt="")
+        h2.r1text WORKS IN YELLOW
+    .row
+      .col-sm-4
+        img.tri.tri2(src="https://awiclass.monoame.com/img/webpic/w_tri2.svg", alt="")
+      .col-sm-8
+        img.tri.tri3(src="https://awiclass.monoame.com/img/webpic/w_tri3.svg", alt="")
+
+        h3.r2text YELLOW STUDIO-Website Design / Development
+        h3.r2text Interactive Art Design
+    .row
+      .col-sm-8
+        h2.r3text 430 MORE SUCCESS CASES
+    .clearfix
+    .row
+      .col-sm-4
+        a.btn.btn-lg.btn-default(href="#section_works") MORE STORY
+      .col-sm-8
+        img.tri.tri4(src="https://awiclass.monoame.com/img/webpic/w_tri4.svg", alt="")
+        img.tri.tri5(src="https://awiclass.monoame.com/img/webpic/w_tri5.svg", alt="")
+section#section_Service
+  .container
+    .row
+      .col-sm-12
+        h1 Service
+    .row
+      .col-sm-4
+        img(src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg", alt="")
+        h3 CI/VI Design
+      .col-sm-4
+        img(src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg", alt="")
+        h3 MotionGraphic
+      .col-sm-4
+        img(src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg", alt="")
+        h3 Web Development
+section#section_works
+  img.marginbottom.mountain(src="https://awiclass.monoame.com/img/margin/m_works.svg")
+  .container
+    .row
+      .col-sm-12 
+        h2 Works
+    .row
+      .col-sm-6.big
+      
+        img(:src="workdata[1].img", alt="")
+        .cover(v-html="workdata[1].content.substr(0,40)")
+      .col-sm-6.little
+        .row
+          .col-sm-6.small(v-for="data in workdata.slice(2,6)")
+            img(:src="data.img", alt="")
+            .cover 
+              p {{data.name}}
+
+section#section_contact
+  img.cat#cat_blue(src="https://awiclass.monoame.com/catpic/cat_blue_cat.png", alt="")
+  img.cat#cat_yellow(src="https://awiclass.monoame.com/catpic/cat_yellow_cat.png", alt="")
+  img.cat#cat_grey(src="https://awiclass.monoame.com/catpic/cat_grey_cat.png", alt="")
+  .container
+    .row
+      .col-sm-6
+        .mails
+          .mail_cover
+            img(src="https://awiclass.monoame.com/img/webpic/w_mail_cover.svg", alt="")
+          .mail_body
+            h5 Dear Yellow Studio
+            label Name
+            input(type="text")
+            label Email
+            input(type="text")
+            label Content
+            textarea
+      .col-sm-6
+        h3 CONTACT
+        br
+        p If you have any question about us,
+        p Don`t hestitate to contact us !
+        br
+        br
+        p YELLOWSTUDIO@gmail.com
+        p ADDRESS: TAIWAN, TAIPEI , XORO Road
+        p Phone: 02-12345678
+
+footer#footer
+  .container
+   img.brand(src="https://awiclass.monoame.com/img/webpic/w_icon_black.svg", alt="")
+      
+    
